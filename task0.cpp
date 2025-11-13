@@ -78,3 +78,36 @@ int main(){
     cout << "Conversion complete.\n";
     return 0;
 }
+
+
+/ Step-by-step conversion of A
+
+// Leaves 4 and 8 → balanced (0).
+
+// Node 6: height(left)=1, height(right)=1 → balance=0 → no rotation.
+
+// Root 10: height(left)=2, height(right)=0 → balance=+2 → Left Heavy → Single Right Rotation.
+
+// Right Rotation: y=10, x=y->left=6, t2=x->right=8;
+// x->right=y, y->left=t2 → 6 becomes new root, 10 becomes right child.
+
+// Step-by-step conversion of B
+
+// Leaves 12 and 18 → balanced (0).
+
+// Node 16: balance=0 → balanced.
+
+// Root 10: height(left)=0, height(right)=2 → balance=-2 → Right Heavy → Single Left Rotation.
+
+// Left Rotation: x=10, y=x->right=16, t2=y->left=12;
+// y->left=x, x->right=t2 → 16 becomes new root, 10 becomes left child.
+
+// Summary:
+
+// convertToAVL() checks balance factors and applies rotations (Right/Left) as needed.
+
+// Temporary pointers x, y, t2 hold subtrees during rotation.
+
+// New subtree root is returned to maintain correct parent links and AVL balance.
+
+
