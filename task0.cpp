@@ -1,3 +1,8 @@
+//AVL trees are self-balancing binary search trees that maintain the height difference (balance factor) of any node between -1 and 1, ensuring operations like insertion, deletion, and search remain O(log n).
+
+//They are used to guarantee fast search and update times even in the worst case.
+
+
 #include <iostream>
 using namespace std;
 
